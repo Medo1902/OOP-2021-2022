@@ -110,7 +110,7 @@ public class BugZap extends PApplet {
 			float halfw = bugWidth / 2;
 			if (playerX > bugX - halfw && playerX < bugX + halfw)
 			{
-				score ++;
+				score = score + 1;
 				resetBug();
 				line(playerX, playerY - 10, playerX, playerY);
 			}
