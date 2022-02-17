@@ -93,13 +93,39 @@ public class Loops extends PApplet {
 				for (int j = 0; j < circles2; j++) {
 					for (int i = 0; i < circles2; i++) {
 						noStroke();
-						float c = map((i+j+offset), 0, circles2 * 2, 0, 255) % 256;
+						float c = map((i + j + offset), 0, circles2 * 2, 0, 255) % 256;
 						fill(c, 255, 255);
 						float x = map(i, 0, circles2 - 1, diamater / 2.0f, width - (diamater / 2.0f));
 						float y = map(j, 0, circles2 - 1, diamater / 2.0f, width - (diamater / 2.0f));
 						circle(x, y, diamater);
 					}
 				}
+			case 5: {
+				background(0);
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						fill((255 / 100) * i * j, 255, 255);
+						ellipse(((width / 10) * i) + 25, ((height / 10) * j) + 25, width / 10, height / 10);
+					}
+				}
+				break;
+			}
+
+			case 6:
+				background(0);
+				colorMode(RGB);
+				float border = width * 0.1f;
+				for (int i  = -5 ; i <= 5; i++)
+				{
+					float x = map(i, -5, 5, border, width - border);
+					stroke(0,255,0);
+					line(x, border, x, height - border);
+					line(border, x, width - border, x);
+					fill(255);
+					text(i,x,border * 0.5f);
+					text(i, border * 0.5f, x);
+				}
+				break;
 
 		}
 	}
