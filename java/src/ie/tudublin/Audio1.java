@@ -46,7 +46,7 @@ public class Audio1 extends PApplet
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix; 
-        ap = minim.loadFile("heroplanet.mp3", 1024);
+        ap = minim.loadFile("levitating.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -76,6 +76,9 @@ public class Audio1 extends PApplet
         average= sum / (float) ab.size();
 
         smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
+
+        float cx = width / 2;
+        float cy = height / 2;
         
 
         switch (mode) {
@@ -86,7 +89,7 @@ public class Audio1 extends PApplet
                     float c = map(i, 0, ab.size(), 0, 255);
                     stroke(c, 255, 255);
                     float f = lerpedBuffer[i] * halfH * 4.0f;
-                    line(i, halfH + f, i, halfH - f);                    
+                    line(i, halfH + f, halfH - f, i);                    
                 }
                 break;
         case 1:
@@ -108,9 +111,7 @@ public class Audio1 extends PApplet
         case 2:
             {
                     background(0, 0, 0, 100);
-                    stroke(255, 255, 255);	
-                    float cx = width / 2;
-                    float cy = height / 2;	
+                    stroke(255, 255, 255);		
                     float radius = map(smoothedAmplitude, 0, 0.1f, 50, 500);		
                     int points = (int)map(mouseX, 0, 255, 3, 50);
                     int sides = points * 2;
@@ -130,8 +131,16 @@ public class Audio1 extends PApplet
                         py = y;
                     }
             }
-        }
+            break;
 
+        case 3:
+            background(0);
+            strokeWeight(2);
+            noFill();
+            float r = map(smoothedAmplitude, 0, 0.5f, 50, 500);
+            //float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
+            circle(cx, cy, r);
+        }
         
         // Other examples we made in the class
         /*
