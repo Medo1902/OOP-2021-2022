@@ -36,8 +36,8 @@ public class Audio1 extends PApplet
 
     public void settings()
     {
-        size(1024, 1000, P3D);
-        //fullScreen(P3D, SPAN);
+        //size(1024, 1000, P3D);
+        fullScreen(P3D, SPAN);
     }
 
     public void setup()
@@ -108,24 +108,15 @@ public class Audio1 extends PApplet
             break;
         case 2:
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     background(0, 0, 0, 100);
                     stroke(255, 255, 255);		
                     float radius = map(smoothedAmplitude, 0, 0.1f, 50, 500);		
                     int points = (int)map(mouseX, 0, 255, 3, 50);
-=======
-=======
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
                     float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
                     background(0, 0, 0, 10);
                     stroke(c, 255, 255);	
                     float radius = map(smoothedAmplitude, 0, 0.1f, 50, 300);		
                     int points = (int)map(mouseX, 0, 255, 3, 10);
-<<<<<<< HEAD
->>>>>>> 70470c93f36683d0ba9aa2d5305c41af5aa45ff8
-=======
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
                     int sides = points * 2;
                     float px = cx;
                     float py = cy - radius; 
@@ -143,12 +134,7 @@ public class Audio1 extends PApplet
                         py = y;
                     }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
             break;
-=======
-=======
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
         case 3:
             background(0);
             strokeWeight(2);
@@ -173,18 +159,9 @@ public class Audio1 extends PApplet
                 circle(i, halfH - f, 5);                    
             }
             break;
-<<<<<<< HEAD
-=======
 
         }
-        
 
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
-
-        }
-        
-
->>>>>>> 70470c93f36683d0ba9aa2d5305c41af5aa45ff8
 
         case 3:
             background(0);
