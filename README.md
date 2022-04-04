@@ -40,8 +40,11 @@ Resources
 - https://github.com/skooter500/OOP-LabTest1-2016
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Week 7 - Conways Game of Life
 =======
+=======
+>>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
 ## Week 10 - Loading and visualising a dataset - Star Map example
 - [Recording of the class](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EcgrS0Sh8v1CgiN9-HHlXBkBs7LHTxG8L08S1HLac0QKfQ?e=9Vxemq)
 - [Link to the original lab test](https://github.com/skooter500/OOP-LabTest1-2016)
@@ -93,7 +96,10 @@ Here is a video of what your finished program might look like:
 - No classes
 
 ## Week 7 - Conway's Game of Life
+<<<<<<< HEAD
 >>>>>>> 547f65597178d0b32a811641945905230f7cd27d
+=======
+>>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
 ### Lecture
 - [Recording of the class](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EVSYi7mI1y9Hgjgq3ibl4yEBRBEUzJyWLEiwIoLWkmR21g?e=Z6Bidf)
 
