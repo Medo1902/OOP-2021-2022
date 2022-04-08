@@ -46,7 +46,7 @@ public class Audio1 extends PApplet
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix; 
-        ap = minim.loadFile("levitating.mp3", 1024);
+        ap = minim.loadFile("heroplanet.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -76,9 +76,6 @@ public class Audio1 extends PApplet
         average= sum / (float) ab.size();
 
         smoothedAmplitude = lerp(smoothedAmplitude, average, 0.1f);
-
-        float cx = width / 2;
-        float cy = height / 2;
         
         float cx = width / 2;
         float cy = height / 2;
@@ -92,7 +89,7 @@ public class Audio1 extends PApplet
                     float c = map(i, 0, ab.size(), 0, 255);
                     stroke(c, 255, 255);
                     float f = lerpedBuffer[i] * halfH * 4.0f;
-                    line(i, halfH + f, halfH - f, i);                    
+                    line(i, halfH + f, i, halfH - f);                    
                 }
                 break;
         case 1:
@@ -108,36 +105,11 @@ public class Audio1 extends PApplet
             break;
         case 2:
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    background(0, 0, 0, 100);
-                    stroke(255, 255, 255);		
-                    float radius = map(smoothedAmplitude, 0, 0.1f, 50, 500);		
-                    int points = (int)map(mouseX, 0, 255, 3, 50);
-=======
-=======
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
-=======
->>>>>>> 547f65597178d0b32a811641945905230f7cd27d
-=======
->>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
                     float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
                     background(0, 0, 0, 10);
                     stroke(c, 255, 255);	
                     float radius = map(smoothedAmplitude, 0, 0.1f, 50, 300);		
                     int points = (int)map(mouseX, 0, 255, 3, 10);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 70470c93f36683d0ba9aa2d5305c41af5aa45ff8
-=======
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
-=======
->>>>>>> 547f65597178d0b32a811641945905230f7cd27d
-=======
->>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
                     int sides = points * 2;
                     float px = cx;
                     float py = cy - radius; 
@@ -155,18 +127,6 @@ public class Audio1 extends PApplet
                         py = y;
                     }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            break;
-=======
-=======
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
-=======
->>>>>>> 547f65597178d0b32a811641945905230f7cd27d
-=======
->>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
         case 3:
             background(0);
             strokeWeight(2);
@@ -191,41 +151,11 @@ public class Audio1 extends PApplet
                 circle(i, halfH - f, 5);                    
             }
             break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
 
         }
         
 
->>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
 
-        }
-        
-
->>>>>>> 547f65597178d0b32a811641945905230f7cd27d
-
-        }
-        
-
->>>>>>> 016e3f4695348f106069e871a5a87a3625b05bb1
-
-        }
-        
-
->>>>>>> 70470c93f36683d0ba9aa2d5305c41af5aa45ff8
-
-        case 3:
-            background(0);
-            strokeWeight(2);
-            noFill();
-            float r = map(smoothedAmplitude, 0, 0.5f, 50, 500);
-            //float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
-            circle(cx, cy, r);
-        }
         
         // Other examples we made in the class
         /*

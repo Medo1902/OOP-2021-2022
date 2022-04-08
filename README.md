@@ -23,8 +23,8 @@ Resources
 - [Assignments](assignments.md)
 
 - Week 5 - Teams Submission
-- Week 11 Lab Test 20% 
-- Week 13 Assignment Submission - 30%
+- 27 April - Lab Test 20% 
+- 4th May Assignmemnt Submission - 30%
 - End of Year exam - 50%
 
 # Last years course
@@ -41,10 +41,90 @@ Resources
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Week 7 - Conways Game of Life
 =======
 =======
 >>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
+=======
+## Week 11 - YASC Part 1
+- [Recording of the class](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/Edu2JUxUJnpNk0DJum_UHIoBNnXLW71f-De16xyCEu9L-w?e=orgOaw)
+
+- [Recording of the tutorial](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EdnREXh-iZVFmXzkZY34zNABey4G2mDiORbj42WohFMkFw?e=7WhKLI)
+
+A couple of solutions to [this codingbat exercise](https://codingbat.com/prob/p105771)
+
+My solution:
+
+```Java
+public int[] evenOdd(int[] nums) {
+  int swaps = 0;
+  do
+  {
+    swaps = 0;
+   for(int i = 0 ; i < nums.length -1 ; i ++)
+   {
+     if (nums[i] % 2 != 0 && nums[i+1] % 2 == 0)
+     {
+       int temp = nums[i];
+       nums[i] = nums[i + 1];
+       nums[i+1] = temp;
+       swaps ++;
+     }
+   }
+  }
+  while (swaps > 0);
+ return nums;
+}
+```
+
+Submitted by Ho Chung:
+
+```Java
+public int[] evenOdd(int[] nums) {
+  int temp[] = new int[nums.length];
+  int start = 0;
+  int end = nums.length - 1;
+  for (int i = 0; i < nums.length; i ++){
+    if (nums[i] % 2 == 0) {
+      temp[start] = nums[i];
+      start++;
+    }
+    else {
+      temp[end] = nums[i];
+      end--;
+    }
+  }
+  return temp;
+}
+```
+
+Submitted by Christina Vargka:
+
+```Java
+public int[] evenOdd(int[] nums) {
+int counter = 0;
+int[] evods = new int[nums.length];
+for(int i = 0; i < nums.length; i++){
+if(nums[i] % 2 == 0){
+evods[counter] = nums[i];
+counter++;
+}
+}
+for(int i = 0; i < nums.length; i++){
+if(nums[i] % 2 == 1){
+evods[counter] = nums[i];
+counter++;
+}
+}
+return evods;
+}
+```
+
+## Lab
+- Work on your assignments!
+
+>>>>>>> bffbaa746fac1278746ddbc521a66c40acfc52e4
 ## Week 10 - Loading and visualising a dataset - Star Map example
 - [Recording of the class](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EcgrS0Sh8v1CgiN9-HHlXBkBs7LHTxG8L08S1HLac0QKfQ?e=9Vxemq)
 - [Link to the original lab test](https://github.com/skooter500/OOP-LabTest1-2016)
@@ -97,9 +177,12 @@ Here is a video of what your finished program might look like:
 
 ## Week 7 - Conway's Game of Life
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 547f65597178d0b32a811641945905230f7cd27d
 =======
 >>>>>>> 5331da2b4fcaf65684dbf742f946d9b39e6e6171
+=======
+>>>>>>> bffbaa746fac1278746ddbc521a66c40acfc52e4
 ### Lecture
 - [Recording of the class](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EVSYi7mI1y9Hgjgq3ibl4yEBRBEUzJyWLEiwIoLWkmR21g?e=Z6Bidf)
 
